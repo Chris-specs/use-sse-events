@@ -1,7 +1,7 @@
 {
     "name": "use-serversent-events",
     "version": "1.0.0",
-    "description": "React hook for Server-Sent Events (SSE)",
+    "description": "A lightweight, type-safe, and production-ready React hook for Server-Sent Events (SSE)",
     "type": "module",
     "main": "./dist/index.cjs",
     "module": "./dist/index.mjs",
@@ -38,6 +38,14 @@
     "author": "Christian Sanchez",
     "license": "MIT",
     "packageManager": "pnpm@10.33.0",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Chris-specs/use-serversent-events.git"
+    },
+    "homepage": "https://use-sse.christiansan.com",
+    "bugs": {
+        "url": "https://github.com/Chris-specs/use-serversent-events/issues"
+    },
     "peerDependencies": {
         "react": ">=18"
     },
