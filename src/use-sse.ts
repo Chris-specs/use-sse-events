@@ -122,8 +122,9 @@ export function useSSE({
                 })
 
                 // Custom events registration
-                if (customEvents) {
-                    Object.keys(customEvents).forEach((name) => {
+                const currentCustomEvents = callbacksRef.current.customEvents
+                if (currentCustomEvents) {
+                    Object.keys(currentCustomEvents).forEach((name) => {
                         addEvent(name, (e) => {
                             callbacksRef.current.customEvents?.[name]?.(e)
                         })
@@ -166,7 +167,7 @@ export function useSSE({
             clearTimeout(reconnectTimeout)
             setIsConnected(false)
         }
-    }, [url, enabled, withCredentials, reconnectInterval, customEvents]) // Only primitive dependencies
+    }, [url, enabled, withCredentials, reconnectInterval]) // Only primitive dependencies
 
     return { isConnected }
 }
