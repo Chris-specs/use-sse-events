@@ -4,7 +4,7 @@ A lightweight, type-safe, and production-ready React hook for Server-Sent Events
 
 ## Features
 
-- ⚡️ **Zero Dependencies & Ultra-lightweight** (~1.4kB)
+- ⚡️ **Zero Dependencies & Ultra-lightweight** (~1.5kB)
 - 🌓 **SSR & Next.js Friendly** (Safe for server-side evaluation)
 - 🔄 **Auto-Reconnection** (Resilient connection lifecycles)
 - 🎯 **Custom Events Support** (Simple and declarative API)
