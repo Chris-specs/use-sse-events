@@ -1,5 +1,5 @@
 {
-    "name": "use-eventsource",
+    "name": "use-sse-events",
     "version": "1.0.0",
     "description": "A lightweight, type-safe, and production-ready React hook for Server-Sent Events (SSE)",
     "type": "module",
@@ -40,11 +40,11 @@
     "packageManager": "pnpm@10.33.0",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Chris-specs/use-eventsource.git"
+        "url": "git+https://github.com/Chris-specs/use-sse-events.git"
     },
     "homepage": "https://use-sse.christiansan.com",
     "bugs": {
-        "url": "https://github.com/Chris-specs/use-eventsource/issues"
+        "url": "https://github.com/Chris-specs/use-sse-events/issues"
     },
     "peerDependencies": {
         "react": ">=18"
