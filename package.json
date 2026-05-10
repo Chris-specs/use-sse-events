@@ -31,7 +31,9 @@
         "react",
         "hook",
         "sse",
-        "server-sent events"
+        "server-sent events",
+        "useSSE",
+        "nextjs"
     ],
     "author": "Christian Sanchez",
     "license": "MIT",
