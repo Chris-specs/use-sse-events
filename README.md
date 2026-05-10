@@ -1,4 +1,4 @@
-# use-serversent-events
+# use-eventsource
 
 A lightweight, type-safe, and production-ready React hook for Server-Sent Events (SSE).
 
@@ -17,11 +17,11 @@ Read the full documentation at **[https://use-sse.christiansan.com](https://use-
 ## Install
 
 ```shell
-pnpm add use-serversent-events
+pnpm add use-eventsource
 ```
 
 ```shell
-npm install use-serversent-events
+npm install use-eventsource
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ npm install use-serversent-events
 ```tsx
 'use client'
 
-import { useSSE } from 'use-serversent-events'
+import { useSSE } from 'use-eventsource'
 
 function App() {
     const { isConnected } = useSSE({
