@@ -34,6 +34,8 @@ export function useSSE({
     const [isConnected, setIsConnected] = useState(false)
     const eventSourceRef = useRef<EventSource | null>(null)
 
+    const customEventKeys = Object.keys(customEvents || {}).join(',')
+
     // Use useCallback to stabilize the callback references
     const callbacksRef = useRef({
         onMessage,
@@ -122,9 +124,8 @@ export function useSSE({
                 })
 
                 // Custom events registration
-                const currentCustomEvents = callbacksRef.current.customEvents
-                if (currentCustomEvents) {
-                    Object.keys(currentCustomEvents).forEach((name) => {
+                if (customEventKeys) {
+                    customEventKeys.split(',').forEach((name) => {
                         addEvent(name, (e) => {
                             callbacksRef.current.customEvents?.[name]?.(e)
                         })
@@ -167,7 +168,7 @@ export function useSSE({
             clearTimeout(reconnectTimeout)
             setIsConnected(false)
         }
-    }, [url, enabled, withCredentials, reconnectInterval]) // Only primitive dependencies
+    }, [url, enabled, withCredentials, reconnectInterval, customEventKeys]) // Only primitive dependencies
 
     return { isConnected }
 }
